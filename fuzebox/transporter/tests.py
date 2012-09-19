@@ -11,8 +11,6 @@ ptc.setupPloneSite()
 
 import fuzebox.transporter
 
-# I would test this if I knew remotely how
-# ~Spanky
 
 class TestCase(ptc.PloneTestCase):
 

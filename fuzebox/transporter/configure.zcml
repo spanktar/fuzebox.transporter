@@ -17,9 +17,8 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <adapter
-      name="TransporterAdapter"
       for="Products.CMFCore.interfaces.ISiteRoot zope.publisher.interfaces.browser.IBrowserRequest"
       factory="fuzebox.transporter.adapters.TransporterTraverser"
       />
-  
+        
 </configure>
