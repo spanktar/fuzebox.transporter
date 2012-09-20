@@ -1,6 +1,7 @@
 from zope.interface import implements
 from zope.publisher.interfaces import IPublishTraverse
 from zope.publisher.interfaces import NotFound
+from ZPublisher.BaseRequest import DefaultPublishTraverse
 
 class TransporterTraverser(object):
     
@@ -17,4 +18,12 @@ class TransporterTraverser(object):
                 
         if name in self.object_ids:
             return self.objects.get(name).__of__(self.context)
+        else:
+            
+            import pdb; pdb.set_trace()
+            
+            default_adapter = DefaultPublishTraverse(object, self)
+            ob2 = default_adapter.publishTraverse(self, name)
+            return ob2
+            
         
